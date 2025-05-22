@@ -9,6 +9,11 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "ngx-type-assist": [
+        "./dist/ngx-type-assist"
+      ]
+    },
     "skipLibCheck": true,
     "isolatedModules": true,
     "esModuleInterop": true,

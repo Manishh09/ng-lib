@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-type-assist": {
+      "projectType": "library",
+      "root": "projects/ngx-type-assist",
+      "sourceRoot": "projects/ngx-type-assist/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-type-assist/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-type-assist/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-type-assist/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ngx-type-assist/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "8e935c3b-d1ba-43ad-b869-0e68a45c1c07"
   }
 }
